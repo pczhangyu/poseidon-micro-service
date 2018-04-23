@@ -1,7 +1,7 @@
 package com.poseidon.micro.repository;
 
-import com.poseidon.micro.entity.Customer;
-import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+import com.poseidon.micro.entity.Coder;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
@@ -10,20 +10,20 @@ import java.util.List;
  * @date 2018/4/23
  * @description elasticsearch CustomerRepository
  */
-public interface CustomerRepository extends ElasticsearchRepository<Customer,String>{
+public interface CoderRepository extends MongoRepository<Coder,String> {
 
     /**
      * 根据 firstName 查询
      * @param firstName
      * @return
      */
-    Customer findByFirstName(String firstName);
+    Coder findByFirstName(String firstName);
 
     /**
      * 根据 lastName查询
      * @param lastName
      * @return
      */
-    List<Customer> findByLastName(String lastName);
+    List<Coder> findByLastName(String lastName);
 
 }

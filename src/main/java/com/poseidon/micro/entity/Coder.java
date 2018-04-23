@@ -1,15 +1,12 @@
 package com.poseidon.micro.entity;
 
-import com.poseidon.micro.enums.IndexTypeEnum;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
 
 /**
  * @author pczhangyu
  * @description document entity
  */
-@Document(indexName = IndexTypeEnum.INDEX_NAME, type = IndexTypeEnum.INDEX_TYPE_CUSTOMER, shards = 1, replicas = 0, refreshInterval = "-1")
-public class Customer {
+public class Coder {
 
     @Id
     private String id;
@@ -18,10 +15,10 @@ public class Customer {
 
     private String lastName;
 
-    public Customer() {
+    public Coder() {
     }
 
-    public Customer(String id,String firstName, String lastName) {
+    public Coder(String id, String firstName, String lastName) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
