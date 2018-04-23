@@ -44,6 +44,7 @@ public class SearchApplication implements CommandLineRunner{
 	}
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(SearchApplication.class, "--debug").close();
 	}
 
