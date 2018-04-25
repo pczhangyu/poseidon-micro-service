@@ -1,7 +1,9 @@
 package com.poseidon.micro.enums;
 
 /**
- * Created by pczhangyu on 2018/4/23.
+ * @author pczhangyu
+ * @date 2018/4/23
+ * @description 索引信息
  */
 public enum IndexTypeEnum {
 
@@ -14,29 +16,29 @@ public enum IndexTypeEnum {
     public static final String INDEX_NAME = "ape_area";
     public static final String INDEX_TYPE_CUSTOMER = "customer";
 
-    private String IndexName;
+    private String indexName;
 
-    private String IndexType;
+    private String indexType;
 
     IndexTypeEnum(String indexName, String indexType) {
-        this.IndexName = indexName;
-        this.IndexType = indexType;
+        this.indexName = indexName;
+        this.indexType = indexType;
     }
 
     public String getIndexName() {
-        return IndexName;
+        return indexName;
     }
 
     public void setIndexName(String indexName) {
-        IndexName = indexName;
+        indexName = indexName;
     }
 
     public String getIndexType() {
-        return IndexType;
+        return indexType;
     }
 
     public void setIndexType(String indexType) {
-        IndexType = indexType;
+        indexType = indexType;
     }
 
     public static void main(String[] args) {

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.UUID;
 
@@ -16,6 +17,7 @@ import java.util.UUID;
  * @description start all
  */
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.poseidon.micro"})
 public class SearchApplication implements CommandLineRunner{
 
 	@Autowired
@@ -51,8 +53,7 @@ public class SearchApplication implements CommandLineRunner{
 	}
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(SearchApplication.class, "--debug").close();
+		SpringApplication.run(SearchApplication.class, "--debug");
 	}
 
 	@Override
